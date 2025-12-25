@@ -1,0 +1,93 @@
+import time
+import os
+import webbrowser
+
+print("HENRIQUE OS")
+print("versão 0.13\n")
+
+num = 0
+
+while True:
+    resposta = input(">>> ").lower()
+    if "faz o l" in resposta:
+        print("\nfaz o L vc!\n")
+
+    elif "sei la" in resposta:
+        print("\nnão sabe oq escrever né\n")
+
+    elif resposta == "parar o tempo":
+        print("tempo parado por 5 seg!")
+        time.sleep(5)
+
+    elif resposta == "limpar":
+        os.system("cls")
+        print("HENRIQUE OS")
+        print("versão 0.13\n")
+
+    elif resposta == "cachorrinho":
+        print("\ncachorros\n")
+
+    elif resposta == "ajuda":
+        print("\nfaz o L\nsei la\nparar o tempo\nlimpar\ncachorrinho\nsair\nsexto ano\nmostrar\nsite sel\nalan\njogo\nadministrador\nchocolate\n")
+
+    elif resposta == "sair":
+        break
+
+    elif resposta == "":
+        print()
+
+    elif "sexto ano" in resposta:
+        print("\nfalta.\n")
+
+    elif resposta == "help":
+        print("\naqui é Brasil porra! (digite ajuda)\n")
+
+    elif resposta == "mostrar":
+        variavel = input("oq?:  ")
+        os.system("cls")
+        print("HENRIQUE OS")
+        print("versão 0.13\n")
+        print(variavel)
+
+    elif resposta == "alan":
+        webbrowser.open("https://youtu.be/EFmxPMdBqmU?si=m9nYQtWKwtV0dO4q")
+        print()
+
+    elif resposta == "site sel":
+        diga = input("\ndiga o site:  ")
+        print()
+        webbrowser.open(diga)
+
+    elif resposta == "raquete":
+        print("\nvc descobriu um Easter Egg!\n")
+
+    elif resposta == "chocolate":
+        print("\ntoma um docinho!\n")
+
+    elif  resposta == "administrador":
+        senha = input("\nqual a senha?:  ")
+        if senha == "mano":
+            print("\nnão tem nada aqui kkk\n")
+        else:
+            print("\nacesso negado\n")
+
+    elif resposta == "jogo":
+        os.system("cls")
+        variavell = input("adivinhe a palavra:  ")
+        if variavell == "sei la":
+            print("acertou!")
+            time.sleep(5)
+            break
+
+        else:
+            print("errou...")
+            time.sleep(5)
+            break
+
+    else:
+        print()
+        print(resposta, "não é um comando.\n")
+        num = num + 1
+
+        if num == 1:
+            print("digite ajuda para ver os comandos!\n")
